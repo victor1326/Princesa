@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Cantinho - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+</head>
+<body>
+     
+    <div id="login-page" class="page active">
+        <div class="login-container">
+            <div class="login-card">
+                <h1 class="login-title">Nosso Cantinho</h1>
+                <p class="login-subtitle">Um lugar especial para nós dois</p>
+                
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Entrar</button>
+                    
+                    <div id="error-message" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="main-page" class="page">
+        <header class="header">
+            <h1>Nosso Cantinho</h1>
+            <button id="logout-btn" class="logout-btn">Sair</button>
+        </header>
+
+        <main class="main-content">
+             Seção de Texto Romântico 
+            <section class="romantic-text-section">
+                <button id="toggle-text-btn" class="toggle-btn">Mostrar/Editar Texto</button>
+                <div id="romantic-text" class="romantic-text">
+                    <div class="text-content">
+                        <p>Meu amor,</p>
+                        <p>Desde que você entrou na minha vida, tudo ficou mais leve e colorido. Cada pequeno momento ao seu lado é um presente — seu sorriso aquece meus dias e sua voz acalma minhas noites. Quero construir memórias ao teu lado, tirar fotos, rir até a barriga doer e assistir os nossos vídeos mil vezes.</p>
+                        <p>Este site é só um cantinho nosso: fotos, vídeos e palavras que guardam o que sentimos. Te amo hoje e sempre.</p>
+                        <p class="signature">— Com todo carinho, seu Princípe</p>
+                    </div>
+                </div>
+            </section>
+
+             Seção de Upload 
+            <section class="upload-section">
+                <h2>Nossa Galeria</h2>
+                <div class="upload-area">
+                    <input type="file" id="file-input" multiple accept="image/*,video/*" style="display: none;">
+                    <button id="upload-btn" class="upload-btn">Adicionar Fotos/Vídeos</button>
+                </div>
+            </section>
+
+             Galeria 
+            <section class="gallery-section">
+                <div id="gallery" class="gallery">
+                    <div class="empty-gallery">
+                        <div class="empty-icon">💕</div>
+                        <p>Ainda não há memórias aqui.<br>Que tal adicionar algumas fotos especiais?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Criado com amor em <span id="current-date"></span></p>
+        </footer>
+    </div>
+
+     Modal para visualizar mídia 
+    <div id="media-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-media-container"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
